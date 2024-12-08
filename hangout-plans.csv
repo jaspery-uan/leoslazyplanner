@@ -1,0 +1,9 @@
+effort, price, duration, location, risk_factors
+2, $$, <3, indoor, sun-exposure, dense-crowds
+3, $$$, <1, outdoor, sun-exposure, noise
+2, $$, <3, indoor, sun-exposure, dense-crowds
+3, $$$, <1, outdoor, sun-exposure, noise
+2, $$, <3, indoor, dense-crowds
+3, $$$, <1, outdoor, sun-exposure
+2, $$, <3, indoor, sun-exposure, dense-crowds
+3, $$$, <1, outdoor, noise

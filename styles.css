@@ -1,0 +1,57 @@
+body{
+  padding: 50px;
+  background-color: #F4E9D7;
+  font-family: Ubuntu, Verdana, sans-serif;
+}
+.title {
+  color: #765347;
+  text-align: center;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.left{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+}
+.sloth-image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.sloth-image{
+    width: 500px;
+    height: auto;
+    padding: 50px;
+}
+.subheading{
+    color: #765347;
+    text-align: center; 
+}
+
+.description{
+    text-align: center;
+}
+.right{
+  display: flex;
+  flex-direction: column;
+}
+p{
+    font-size: 18px;
+}
+.try-now-btn {
+    background-color: #8D6F64;
+    color: white; 
+    font-size: 1.2em; 
+    padding: 15px 30px; /* Vertical and horizontal padding */
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }

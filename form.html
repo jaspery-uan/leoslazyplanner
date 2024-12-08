@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo's Lazy Planner - Plan Your Hangout</title>
+    <link rel="stylesheet" href="formstyle.css" />
+</head>
+<body>
+    <div class="form-container">
+      <h2 class="title"><br><br><br><br><br><br><br><br><br><br><br><br>Plan Your Hangout</h2>
+      <form id="planning-form" action="#" method="POST">
+        
+        <!-- Effort Ranking -->
+        <div class="form-group">
+          <label for="effort">Effort Ranking:</label>
+          <input type="range" id="effort" name="effort" min="1" max="3" step="1" required>
+          <span id="effort-value">2 (Medium)</span>  
+        </div>
+
+        <!-- Price Range -->
+        <div class="form-group">
+          <label for="price">Price Range:</label>
+          <select id="price" name="price" required>
+            <option value="">Select Price Range</option>
+            <option value="$">$0 - $20</option>
+            <option value="$$"> $20 - $50</option>
+            <option value="$$$">$50 - $100</option>
+            <option value="$$$+">$100+</option>
+          </select>
+        </div>
+
+        <!-- Duration -->
+        <div class="form-group">
+          <label for="duration">Duration:</label>
+          <select id="duration" name="duration" required>
+            <option value="">Select Duration</option>
+            <option value="<1">Less than 1 hour</option>
+            <option value="<3">Less than 3 hours</option>
+            <option value="<5">Less than 5 hours</option>
+          </select>
+        </div>
+
+        <!-- Location -->
+        <div class="form-group">
+          <label>Location:</label>
+          <label for="indoor">
+            <input type="radio" id="indoor" name="location" value="indoor" required> Indoor
+          </label>
+          <label for="outdoor">
+            <input type="radio" id="outdoor" name="location" value="outdoor" required> Outdoor
+          </label>
+        </div>
+
+        <!-- Risk Factors (Checkboxes) -->
+        <div class="form-group">
+          <label>Possible Risk Factors to Avoid:</label>
+          <label for="sun-exposure">
+            <input type="checkbox" id="sun-exposure" name="risk-factors[]" value="sun-exposure"> Sun Exposure
+          </label>
+          <label for="dense-crowds">
+            <input type="checkbox" id="dense-crowds" name="risk-factors[]" value="dense-crowds"> Dense Crowds
+          </label>
+          <label for="noise">
+            <input type="checkbox" id="noise" name="risk-factors[]" value="noise"> Noise
+          </label>
+        </div>
+
+        <!-- Sloth Image -->
+        <img class="sloth" src="sloth.png" alt="Sloth">
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script>
+      // Dynamically update effort value based on slider input
+      const effortInput = document.getElementById("effort");
+      const effortValueDisplay = document.getElementById("effort-value");
+
+      effortInput.addEventListener("input", function () {
+        let effortDescription;
+        switch (effortInput.value) {
+          case "1":
+            effortDescription = "Low";
+            break;
+          case "2":
+            effortDescription = "Medium";
+            break;
+          case "3":
+            effortDescription = "High";
+            break;
+          default:
+            effortDescription = "Unknown";
+        }
+        effortValueDisplay.textContent = `${effortInput.value} (${effortDescription})`;
+      });
+
+      // Handle form submission and redirect to results page
+      const form = document.getElementById("planning-form");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the default form submission
+        
+        // Optionally, you can handle the form data or send it to a server here
+        // For now, we will simply redirect to the results1.html page
+        window.location.href = "results1.html";
+      });
+    </script>
+</body>
+</html>
